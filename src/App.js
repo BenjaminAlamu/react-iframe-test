@@ -1,23 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import Iframe from "react-iframe";
+import "./App.scss";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="">
+      <div className="">
+        <div>
+          <p>Iframe without Package</p>
+          <div className="iframe-container">
+            <iframe
+              src="https://embed.restream.io/player/index.html?token=fce66ffe308ea688997cf73f38a35c70"
+              width="100%"
+              height="600"
+              frameborder="0"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <p>Iframe with Package</p>
+          <Iframe
+            url="https://embed.restream.io/player/index.html?token=fce66ffe308ea688997cf73f38a35c70"
+            width="100%"
+            height="450px"
+            id="myId"
+            className="myClassname"
+            display="initial"
+            position="relative"
+          />
+        </div>
+      </div>
     </div>
   );
 }
